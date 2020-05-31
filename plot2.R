@@ -11,10 +11,12 @@ data <- subset(data,((Date>="2007-02-01") &
                      (Date<="2007-02-02")))
 data$Global_active_power <- as.numeric(as.character(data$Global_active_power))
 
-#Plotting graph
+#Setting graph size and plotting graph
+dev.new(width=480,height=480,unit="px")
 plot(data$DateTime,data$Global_active_power,
      type="n",
-     ylab="Global Active Power (kilowatts)")
+     ylab="Global Active Power (kilowatts)",
+     xlab="")
 lines(data$DateTime,
       data$Global_active_power)
 

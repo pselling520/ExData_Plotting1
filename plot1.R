@@ -7,6 +7,7 @@ data <- subset(data,((Date>="2007-02-01") &
 data$Global_active_power <- as.numeric(as.character(data$Global_active_power))
 
 #Creating graph
+dev.new(width=480,height=480,unit="px")
 hist(data$Global_active_power, 
      breaks=15,
      col="red",
