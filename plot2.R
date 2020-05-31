@@ -1,8 +1,4 @@
 
-#NOTE: Not loading in data again because it was already loaded in for plot1,
-#but I'm including the code I used to load in the data in case other plots
-#are examined individually
-
 #Loading in data, adding in datetime column
 data <- read.table(file,header=TRUE, sep=";")
 date <- as.character(data$Date)
